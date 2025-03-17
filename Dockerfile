@@ -1,5 +1,5 @@
-# FROM python:3.11.0b1-buster
-FROM python:3.12.0b2-buster
+FROM python:3.11.0b1-buster
+#FROM python:3.12.0b2-buster
 
 # set work directory
 WORKDIR /app
@@ -18,7 +18,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Install dependencies
 RUN python -m pip install --no-cache-dir pip==22.0.4
-RUN pip install setuptools
+#RUN pip install setuptools
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
